@@ -54,7 +54,18 @@ export const Contact = () => {
                       {item.label}
                     </div>
 
-                    <div className={'contact_left_mono_text'}>{item.value}</div>
+                    {item.link ? (
+                      <a
+                        href={item.value}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="contact_left_mono_text"
+                      >
+                        {item.value}
+                      </a>
+                    ) : (
+                      <div className="contact_left_mono_text">{item.value}</div>
+                    )}
                   </div>
                 </div>
               ))}

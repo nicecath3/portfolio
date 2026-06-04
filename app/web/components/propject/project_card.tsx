@@ -11,7 +11,6 @@ export const ProjectCard = (props: propsType) => {
     <div className="border-glow project_card">
       <div>
         <span className={'project_number'}>{project.id}</span>
-        <div className={'project_lines'}>{project.lines} lines</div>
       </div>
 
       <div>
@@ -22,7 +21,14 @@ export const ProjectCard = (props: propsType) => {
           )}
         </div>
 
-        <p className={'project_desc'}>{project.description}</p>
+        {project.description.map((text, tIdx) => {
+          return (
+            <p className={'project_desc'} key={tIdx}>
+              <span className="experience-card__task-bullet">▹</span>
+              {project.description}
+            </p>
+          );
+        })}
 
         <div className={'project_tags'}>
           {project.stack.map((tech) => (

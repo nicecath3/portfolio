@@ -1,7 +1,7 @@
 export interface projectType {
   id: string;
   title: string;
-  description: string;
+  description: string[];
   stack: string[];
   github: string;
   live: string;
@@ -12,11 +12,19 @@ export interface projectType {
 export const projects: projectType[] = [
   {
     id: '01',
-    title: '개발 중 입니다..',
-    description: '',
-    stack: ['Next.js', 'Tailwind CSS', 'SCSS', 'Fetch API', 'ReSend', 'GitHub'],
+    title: '포트폴리오 웹사이트',
+    description: ['나만의 포트폴리오를 위한 웹사이트 개발'],
+    stack: [
+      'Next.js',
+      'Tailwind CSS',
+      'SCSS',
+      'Fetch API',
+      'ReSend',
+      'GitHub',
+      'vercel',
+    ],
     github: 'https://github.com/nicecath3/portfolio',
-    live: '',
+    live: 'https://kgrportfolio.vercel.app/web',
     inDevelopment: true,
     lines: '0',
   },

@@ -1,0 +1,27 @@
+.section-container {
+  max-width: 72rem;
+  margin: 0 auto;
+}
+
+.tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+
+  .tech-badge {
+    font-family: var(--font-sans);
+    font-size: 1.0rem;
+    padding: 3px 10px;
+    border-radius: 3px;
+    border: 1px solid var(--border);
+    color: var(--accent-cyan);
+    background: rgba(0, 212, 255, 0.06);
+    transition: all 0.2s;
+
+    &:hover{
+      border-color: var(--accent-cyan);
+      background: rgba(0, 212, 255, 0.12);
+      box-shadow: 0 0 10px rgba(0, 212, 255, 0.2);
+    }
+  }
+}

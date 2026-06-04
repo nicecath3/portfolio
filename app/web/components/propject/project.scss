@@ -1,0 +1,123 @@
+.grid_bg {
+  background-image:
+          linear-gradient(rgba(99, 179, 237, 0.03) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(99, 179, 237, 0.03) 1px, transparent 1px);
+  background-size: 60px 60px;
+  padding: 120px 24px;
+  background: var(--bg-secondary);
+
+  .section_container {
+    max-width: 72rem;
+    margin: 0 auto;
+
+    .projects_list {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+  }
+}
+
+.project_card {
+  background: var(--bg-card);
+  border-radius: 8px;
+  padding: 32px;
+  display: grid;
+  grid-template-columns: 80px 1fr auto;
+  gap: 28px;
+  align-items: start;
+  transition: transform 0.2s;
+  cursor: default;
+
+  &:hover {
+    transform: translateX(6px);
+  }
+}
+
+.project_number {
+  font-family: var(--font-mono);
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: rgba(99, 179, 237, 0.15);
+  line-height: 1;
+}
+
+.project_lines {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  color: var(--text-muted);
+  margin-top: 8px;
+}
+
+.project_title_wrap {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+
+  .project_title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--text-primary);
+  }
+
+  .project_inDevelopment {
+    font-family: var(--font-mono);
+    font-size: 0.62rem;
+    color: var(--accent-green);
+    border: 1px solid var(--accent-green);
+    padding: 2px 8px;
+    border-radius: 2px;
+    opacity: 0.8;
+  }
+}
+
+.project_desc {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.7;
+  margin-bottom: 16px;
+}
+
+.project_tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.project_links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-top: 4px;
+
+  .project_link_github {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    color: var(--text-muted);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: color 0.2s;
+
+    &:hover {
+      color: var(--text-primary);
+    }
+  }
+
+  .project_link_live {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    color: var(--accent-cyan);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: opacity 0.2s;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}

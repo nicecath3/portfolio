@@ -1,0 +1,15 @@
+.footer_style {
+  border-top: 1px solid;
+  padding: 32px 24px;
+  text-align: center;
+
+  .text_area {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    color: var(--text-muted);
+
+    .text_color {
+      color: var(--accent-cyan);
+    }
+  }
+}

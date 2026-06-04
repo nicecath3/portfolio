@@ -1,0 +1,196 @@
+.about_me {
+  background-image:
+          linear-gradient(rgba(99, 179, 237, 0.03) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(99, 179, 237, 0.03) 1px, transparent 1px);
+  background-size: 60px 60px;
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 0 24px;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(0, 212, 255, 0.06) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 20%;
+    right: 5%;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(0, 255, 136, 0.04) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .about_me_container {
+    max-width: 72rem;
+    margin: 0 auto;
+    width: 100%;
+    padding-top: 80px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+  }
+}
+
+.about_me_title{
+  font-size: clamp(2.8rem, 5vw, 4.5rem);
+  font-weight: 700;
+  line-height: 1.05;
+  margin-bottom: 16px;
+  opacity: 0;
+  animation: fadeInUp 0.7s ease 0.2s forwards;
+
+  .text1{
+    color: var(--text-secondary);
+    font-size: 0.6em;
+    font-weight: 300;
+    display: block;
+    margin-bottom: 4px;
+  }
+
+  .text2{
+    color: var(--text-primary);
+  }
+}
+
+.about_me_sub_title{
+  height: 52px;
+  margin-bottom: 24px;
+  opacity: 0;
+  animation: fadeInUp 0.7s ease 0.35s forwards;
+
+  .text1{
+    font-size: clamp(1.4rem, 2.5vw, 2rem);
+    font-weight: 600;
+    color: var(--text-secondary);
+  }
+
+  .text2{
+    font-size: clamp(1.4rem, 2.5vw, 2rem);
+    font-weight: 700;
+    background: linear-gradient(135deg, var(--accent-cyan), var(--accent-blue));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+.about_me_context{
+  color: var(--text-secondary);
+  font-size: 1rem;
+  line-height: 1.8;
+  max-width: 480px;
+  margin-bottom: 48px;
+  opacity: 0;
+  animation: fadeInUp 0.7s ease 0.5s forwards;
+}
+
+
+.about_me_btns {
+  display: flex;
+  gap: 16px;
+  opacity: 0;
+  animation: fadeInUp 0.7s ease 0.65s forwards;
+
+  .about_me_project_button{
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    background: var(--accent-cyan);
+    color: var(--bg-primary);
+    padding: 12px 28px;
+    border-radius: 3px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: all 0.2s;
+    display: inline-block;
+
+    &:hover {
+      box-shadow: 0 0 25px rgba(0, 212, 255, 0.4);
+      transform: translateY(-2px);
+    }
+  }
+
+  .about_me_contact_button{
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    border: 1px solid var(--border-glow);
+    color: var(--text-primary);
+    padding: 12px 28px;
+    border-radius: 3px;
+    text-decoration: none;
+    transition: all 0.2s;
+    display: inline-block;
+
+    &:hover {
+      border-color: var(--accent-cyan);
+      color: var(--accent-cyan);
+    }
+  }
+}
+
+.code_board {
+  opacity: 0;
+  animation: fadeInUp 0.7s ease 0.5s forwards;
+
+  &_card {
+    background: var(--bg-card);
+    border-radius: 8px;
+    overflow: hidden;
+
+    &_bar {
+      background: rgba(255, 255, 255, 0.04);
+      padding: 12px 16px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      border-bottom: 1px solid var(--border);
+
+      .filename {
+        font-family: var(--font-mono);
+        font-size: 0.72rem;
+        color: var(--text-muted);
+        margin-left: 8px;
+      }
+    }
+
+    &_code {
+      padding: 24px;
+      font-family: var(--font-mono);
+      font-size: 0.82rem;
+      line-height: 2;
+    }
+  }
+}
+
+.available_status {
+  margin-top: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding-left: 4px;
+
+  &_dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--accent-green);
+    box-shadow: 0 0 8px var(--accent-green);
+    animation: blink 2s infinite;
+  }
+
+  &_text {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    color: var(--text-muted);
+  }
+}

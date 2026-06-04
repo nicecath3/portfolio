@@ -9,6 +9,7 @@ import { Contact } from '@/app/web/components/contact';
 import { Experience } from '@/app/web/components/experience';
 
 export default function Home() {
+  // 빌드용 배포
   return (
     <main>
       <NavBar />

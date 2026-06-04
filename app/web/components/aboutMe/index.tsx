@@ -41,7 +41,7 @@ export const AboutMe = () => {
   }, [displayed, typing, roleIndex]);
 
   return (
-    <section className="about_me">
+    <section id="about" className="about_me">
       <div className="about_me_container">
         <div>
           <h1 className={'about_me_title'}>

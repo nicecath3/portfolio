@@ -1,0 +1,94 @@
+.experience-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.experience-card {
+  background: var(--bg-card);
+  border-radius: 8px;
+  padding: 32px;
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 28px;
+  align-items: start;
+  transition: transform 0.2s;
+  cursor: default;
+
+  &:hover {
+    transform: translateX(6px);
+  }
+
+  &__number {
+    font-family: var(--font-mono);
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: rgba(99, 179, 237, 0.15);
+    line-height: 1;
+    display: block;
+  }
+
+  &__type {
+    font-family: var(--font-mono);
+    font-size: 0.62rem;
+    color: var(--accent-cyan);
+    border: 1px solid var(--accent-cyan);
+    padding: 2px 8px;
+    border-radius: 2px;
+    opacity: 0.8;
+    display: inline-block;
+    margin-top: 8px;
+  }
+
+  &__header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    gap: 16px;
+  }
+
+  &__company {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 4px;
+  }
+
+  &__period {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    color: var(--text-muted);
+    white-space: nowrap;
+  }
+
+  &__desc {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 16px;
+  }
+
+  &__tasks {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  &__task {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+  }
+
+  &__task-bullet {
+    color: var(--accent-cyan);
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+}

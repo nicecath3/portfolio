@@ -34,23 +34,27 @@ export const ProjectCard = (props: propsType) => {
       </div>
 
       <div className={'project_links'}>
-        <a
-          href={project.github}
-          target="_blank"
-          rel="noopener noreferrer"
-          className={'project_link_github'}
-        >
-          <span>⌥</span> github
-        </a>
+        {!!project.github && (
+          <a
+            href={project.github}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={'project_link_github'}
+          >
+            <span>⌥</span> github
+          </a>
+        )}
 
-        <a
-          href={project.live}
-          target="_blank"
-          rel="noopener noreferrer"
-          className={'project_link_live'}
-        >
-          <span>↗</span> live
-        </a>
+        {!!project.live && (
+          <a
+            href={project.live}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={'project_link_live'}
+          >
+            <span>↗</span> live
+          </a>
+        )}
       </div>
     </div>
   );

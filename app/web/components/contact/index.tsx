@@ -54,9 +54,9 @@ export const Contact = () => {
                       {item.label}
                     </div>
 
-                    {item.link ? (
+                    {item.label === 'github' ? (
                       <a
-                        href={item.value}
+                        href={'https://github.com/nicecath3?tab=repositories'}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="contact_left_mono_text"

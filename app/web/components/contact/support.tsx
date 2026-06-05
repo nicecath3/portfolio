@@ -7,3 +7,9 @@ export const ContactLeftInfo = [
     icon: '◈',
   },
 ];
+
+export const verifyEmail = (email: string) => {
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  return emailRegex.test(email);
+};

@@ -3,28 +3,37 @@
 import { useState } from 'react';
 import { SectionHeader } from '@/app/web/components/sectionHeader';
 import './contact.scss';
-import { ContactLeftInfo } from '@/app/web/components/contact/support';
+import {
+  ContactLeftInfo,
+  verifyEmail,
+} from '@/app/web/components/contact/support';
 import { sendMessage } from '@/app/web/api/contact';
 
 export const Contact = () => {
   const [form, setForm] = useState({ name: '', email: '', message: '' });
   const [sent, setSent] = useState(false);
+  const [emailError, setEmailError] = useState(false);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
+    e.target.name === 'email' && emailError && setEmailError(false);
+
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
   const handleSubmit = () => {
-    console.log(process.env.RESEND_API_KEY);
-    sendMessage(form)
-      .then(() => {
-        setSent(true);
-      })
-      .catch(() => {
-        alert('메세지 전송에 실패하였습니다.');
-      });
+    if (verifyEmail(form.email)) {
+      sendMessage(form)
+        .then(() => {
+          setSent(true);
+        })
+        .catch(() => {
+          alert('메세지 전송에 실패하였습니다.');
+        });
+    } else {
+      setEmailError(true);
+    }
   };
 
   return (
@@ -100,7 +109,6 @@ export const Contact = () => {
                   <label className={'mono_label_block'}>email</label>
                   <input
                     name="email"
-                    type="email"
                     value={form.email}
                     onChange={handleChange}
                     placeholder="hello@example.com"
@@ -110,6 +118,14 @@ export const Contact = () => {
                       e.target.style.boxShadow = 'none';
                     }}
                   />
+                  {emailError && (
+                    <label
+                      className={'mono_label_block'}
+                      style={{ color: 'red' }}
+                    >
+                      이메일 형식을 확인해주세요.
+                    </label>
+                  )}
                 </div>
 
                 <div>
@@ -131,7 +147,9 @@ export const Contact = () => {
                 <button
                   onClick={handleSubmit}
                   className={'contact_right_btn'}
-                  disabled={!form.name || !form.email || !form.message}
+                  disabled={
+                    !form.name || !form.email || !form.message || emailError
+                  }
                 >
                   보내기
                 </button>

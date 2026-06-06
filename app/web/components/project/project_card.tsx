@@ -1,4 +1,4 @@
-import { projectType } from '@/app/web/components/propject/support';
+import { projectType } from '@/app/web/components/project/support';
 
 interface propsType {
   project: projectType;

@@ -1,7 +1,7 @@
-import { ProjectCard } from '@/app/web/components/propject/project_card';
+import { ProjectCard } from '@/app/web/components/project/project_card';
 import './project.scss';
 import { SectionHeader } from '@/app/web/components/sectionHeader';
-import { projects } from '@/app/web/components/propject/support';
+import { projects } from '@/app/web/components/project/support';
 
 export const Projects = () => {
   return (

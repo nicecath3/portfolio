@@ -20,7 +20,7 @@ export const projects: projectType[] = [
       'Fetch API',
       'ReSend',
       'GitHub',
-      'vercel',
+      'Vercel',
     ],
     github: 'https://github.com/nicecath3/portfolio',
     live: 'https://kgrportfolio.vercel.app/web',

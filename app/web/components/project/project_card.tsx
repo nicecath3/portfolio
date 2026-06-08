@@ -25,7 +25,7 @@ export const ProjectCard = (props: propsType) => {
           return (
             <p className={'project_desc'} key={tIdx}>
               <span className="experience-card__task-bullet">▹</span>
-              {project.description}
+              {text}
             </p>
           );
         })}

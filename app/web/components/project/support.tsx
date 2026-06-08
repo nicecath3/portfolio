@@ -6,7 +6,6 @@ export interface projectType {
   github: string;
   live: string;
   inDevelopment: boolean;
-  lines: string;
 }
 
 export const projects: projectType[] = [
@@ -25,18 +24,28 @@ export const projects: projectType[] = [
     ],
     github: 'https://github.com/nicecath3/portfolio',
     live: 'https://kgrportfolio.vercel.app/web',
-    inDevelopment: true,
-    lines: '0',
+    inDevelopment: false,
   },
-  // {
-  //   id: '02',
-  //   title: 'Dev Blog Platform',
-  //   description:
-  //     'MDX 기반의 개발 블로그 플랫폼. 코드 하이라이팅, 다크모드, SEO 최적화를 지원합니다.',
-  //   stack: ['Next.js', 'MDX', 'Prisma', 'PostgreSQL', 'Vercel'],
-  //   github: 'https://github.com',
-  //   live: 'https://example.com',
-  //   inDevelopment: true,
-  //   lines: '8,200',
-  // },
+  {
+    id: '02',
+    title: 'PriceHunt — 스마트 가격 비교 서비스',
+    description: [
+      '네이버 쇼핑 API 기반 실시간 상품 가격 비교 서비스',
+      '무한 스크롤, 카테고리 필터, 정렬, 가격 추이 차트 구현',
+      '목표가 알림 등록 및 헤더 드롭다운으로 내역 관리',
+    ],
+    stack: [
+      'Next.js',
+      'TypeScript',
+      'SCSS',
+      'React Query',
+      'Jotai',
+      'Chart.js',
+      'GitHub',
+      'Vercel',
+    ],
+    github: 'https://github.com/nicecath3/pricehunt',
+    live: 'https://kgrpricehunt.vercel.app',
+    inDevelopment: false,
+  },
 ];

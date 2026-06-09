@@ -48,4 +48,24 @@ export const projects: projectType[] = [
     live: 'https://kgrpricehunt.vercel.app',
     inDevelopment: false,
   },
+  {
+    id: '03',
+    title: 'CryptoSim — 가상 코인 투자 시뮬레이터',
+    description: [
+      '업비트 실시간 WebSocket 기반 전 코인 시세 스트리밍',
+      '시장가·지정가 주문, 수수료 계산, 체결내역, 보유 코인 수익률 관리',
+      'SVG 캔들 차트 (7개 단위), 다크/라이트 테마, localStorage 가상 자산 관리',
+    ],
+    stack: [
+      'Next.js',
+      'TypeScript',
+      'SCSS',
+      'WebSocket',
+      'GitHub',
+      'Vercel',
+    ],
+    github: 'https://github.com/nicecath3/crypto-dashboard',
+    live: 'https://kgrcrypto.vercel.app',
+    inDevelopment: false,
+  },
 ];

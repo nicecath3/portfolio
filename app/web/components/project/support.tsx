@@ -61,13 +61,4 @@ export const projects: projectType[] = [
     live: 'https://kgrcrypto.vercel.app',
     inDevelopment: false,
   },
-  {
-    id: '04',
-    title: '주제 고민 중..',
-    description: [''],
-    stack: [''],
-    github: '',
-    live: '',
-    inDevelopment: true,
-  },
 ];

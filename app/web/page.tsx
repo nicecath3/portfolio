@@ -1,4 +1,10 @@
-'use client';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: 'https://kgrportfolio.vercel.app/web',
+  },
+};
 
 import { NavBar } from '@/app/web/layout/navbar';
 import { Footer } from '@/app/web/layout/footer';

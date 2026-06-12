@@ -12,6 +12,15 @@ const geistMono = Geist_Mono({
   subsets: ['latin'],
 });
 
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: '김경률',
+  url: 'https://kgrportfolio.vercel.app',
+  jobTitle: 'Frontend Developer',
+  knowsAbout: ['React', 'Next.js', 'TypeScript', 'Frontend Development'],
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -22,6 +31,12 @@ export default function RootLayout({
       lang="ko"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <body className="min-h-full flex flex-col">{children}</body>
     </html>
   );

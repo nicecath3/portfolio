@@ -6,7 +6,7 @@ const BASE_URL = 'https://kgrportfolio.vercel.app';
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
-      url: BASE_URL,
+      url: `${BASE_URL}/web`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 1,

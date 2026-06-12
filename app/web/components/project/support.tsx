@@ -15,7 +15,7 @@ export const projects: projectType[] = [
     description: ['나만의 포트폴리오를 위한 웹사이트 개발'],
     stack: [
       'Next.js',
-      'Tailwind CSS',
+      'Tailwind',
       'SCSS',
       'Fetch API',
       'ReSend',

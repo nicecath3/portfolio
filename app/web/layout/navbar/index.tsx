@@ -1,3 +1,5 @@
+'use client';
+
 import { useEffect, useState } from 'react';
 import { navItems } from '@/app/web/layout/navbar/support';
 

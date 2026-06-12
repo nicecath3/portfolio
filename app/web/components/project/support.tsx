@@ -61,4 +61,27 @@ export const projects: projectType[] = [
     live: 'https://kgrcrypto.vercel.app',
     inDevelopment: false,
   },
+  {
+    id: '04',
+    title: 'RandomTrip — 랜덤 여행지 추천 서비스',
+    description: [
+      'SVG 지도 기반 2단계 룰렛으로 전국 시군구 랜덤 여행지 선택',
+      '카카오 로컬 API로 관광지·맛집·카페 최대 45개 추천',
+      'OpenWeather API 기반 선택 지역 날씨 및 5일 예보 제공',
+    ],
+    stack: [
+      'Next.js',
+      'TypeScript',
+      'SCSS',
+      'd3-geo',
+      'topojson',
+      'Kakao API',
+      'OpenWeather API',
+      'GitHub',
+      'Vercel',
+    ],
+    github: 'https://github.com/nicecath3/random-trip',
+    live: 'https://kgrrt.vercel.app',
+    inDevelopment: false,
+  },
 ];

@@ -96,7 +96,7 @@ export const projects: projectType[] = [
       'Next.js',
       'TypeScript',
       'Tailwind',
-      'Framer Motion',
+      'Framer-Motion',
       'Supabase',
       'GitHub',
       'Vercel',

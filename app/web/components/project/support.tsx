@@ -84,4 +84,25 @@ export const projects: projectType[] = [
     live: 'https://kgrrt.vercel.app',
     inDevelopment: false,
   },
+  {
+    id: '05',
+    title: 'SkinQuiz — 피부타입 진단 & 화장품 추천 서비스',
+    description: [
+      '7가지 질문 기반 피부타입 분석 후 맞춤 화장품 추천',
+      'Supabase Auth 이메일 로그인, 찜하기, 피부 기록 저장',
+      '피부타입별 탭 탐색, 비로그인 퀴즈 이용 지원',
+    ],
+    stack: [
+      'Next.js',
+      'TypeScript',
+      'Tailwind',
+      'Framer Motion',
+      'Supabase',
+      'GitHub',
+      'Vercel',
+    ],
+    github: 'https://github.com/nicecath3/skincare-quiz',
+    live: 'https://kgrsq.vercel.app',
+    inDevelopment: false,
+  },
 ];

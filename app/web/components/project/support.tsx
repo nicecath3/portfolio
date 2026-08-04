@@ -28,28 +28,6 @@ export const projects: projectType[] = [
   },
   {
     id: '02',
-    title: 'PriceHunt — 스마트 가격 비교 서비스',
-    description: [
-      '네이버 쇼핑 API 기반 실시간 상품 가격 비교 서비스',
-      '무한 스크롤, 카테고리 필터, 정렬, 가격 추이 차트 구현',
-      '목표가 알림 등록 및 헤더 드롭다운으로 내역 관리',
-    ],
-    stack: [
-      'Next.js',
-      'TypeScript',
-      'SCSS',
-      'React-Query',
-      'Jotai',
-      'Chart.js',
-      'GitHub',
-      'Vercel',
-    ],
-    github: 'https://github.com/nicecath3/pricehunt',
-    live: 'https://kgrpricehunt.vercel.app',
-    inDevelopment: false,
-  },
-  {
-    id: '03',
     title: 'CryptoSim — 가상 코인 투자 시뮬레이터',
     description: [
       '업비트 실시간 WebSocket 기반 전 코인 시세 스트리밍',
@@ -62,7 +40,7 @@ export const projects: projectType[] = [
     inDevelopment: false,
   },
   {
-    id: '04',
+    id: '03',
     title: 'RandomTrip — 랜덤 여행지 추천 서비스',
     description: [
       'SVG 지도 기반 2단계 룰렛으로 전국 시군구 랜덤 여행지 선택',
@@ -85,7 +63,7 @@ export const projects: projectType[] = [
     inDevelopment: false,
   },
   {
-    id: '05',
+    id: '04',
     title: 'SkinQuiz — 피부타입 진단 & 화장품 추천 서비스',
     description: [
       '7가지 질문 기반 피부타입 분석 후 맞춤 화장품 추천',

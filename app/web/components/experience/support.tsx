@@ -3,6 +3,7 @@ export interface experienceType {
   company: string;
   period: string;
   type: string;
+  note?: string;
 }
 
 export interface experienceProjectType {
@@ -18,6 +19,7 @@ export const experiences: experienceType[] = [
     company: '더존비앤에프. Frontend Developer',
     period: '2023.01.16 — 2026.04.30',
     type: '정규직',
+    note: '필요 시 사이트 이미지파일 제공 가능',
   },
 ];
 

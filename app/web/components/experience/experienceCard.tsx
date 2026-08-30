@@ -20,7 +20,12 @@ export const ExperienceCard = (props: propsType) => {
       <div>
         <div className="experience-card__header">
           <div>
-            <h3 className="experience-card__company">{exp.company}</h3>
+            <h3 className="experience-card__company">
+              {exp.company}
+              {exp.note && (
+                <span className="experience-card__note">{exp.note}</span>
+              )}
+            </h3>
           </div>
           <span className="experience-card__period">{exp.period}</span>
         </div>
